@@ -13,6 +13,9 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.babelrc
+.eslintignore
+.eslintrc.yml
 
 npm-debug.log*
 yarn-debug.log*

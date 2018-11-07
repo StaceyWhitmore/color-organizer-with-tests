@@ -54,12 +54,12 @@
   },
   "jest": {
     "setupFiles": [
-      "./__tests__/global.js",
-      "./__tests__/shim.js"
+      "./__tests__/shim.js",
+      "./__tests__/global.js"
     ],
     "modulePathIgnorePatterns": [
-      "global.js",
-      "shim.js"
+      "shim.js",
+      "global.js"
     ],
     "verbose": true,
     "notify": true,

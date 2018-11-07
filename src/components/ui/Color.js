@@ -3,9 +3,9 @@ import React, {Component} from 'react'
 //import {Star, StarRating} from'./components'
 //import Star from './Star'
 import PropTypes from 'prop-types'
-import StarRating from './StarRating'
-import FaTrash from 'react-icons/lib/fa/trash-o'
-import TimeAgo from './TimeAgo'
+//import StarRating from './StarRating'
+//import FaTrash from 'react-icons/lib/fa/trash-o'
+//import TimeAgo from './TimeAgo'
 
 
 
