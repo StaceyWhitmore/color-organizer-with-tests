@@ -4,14 +4,14 @@ import PropTypes from 'prop-types'//no longer from 'react'
 //import React from 'react'
 import Color from './Color'
 import '../stylesheets/ColorList.scss'
-
-//import {rateColor, removeColor} from '../../actions'
-//import {sortFunction} from '../../lib/array-helpers'
+//import storeFactory from '../../store/index'
+import {rateColor, removeColor} from '../../actions'
+import {sortFunction} from '../../lib/array-helpers'
 
 
 //const ColorList = ({colors=[], onRate=f=>f, onRemove=f=>f}) =>
 const ColorList = ({ store }) => {
-  const {colors, sort} = store.getState()
+  const {colors, sort} = store.getState()// CANNOT READ PROPERTY getState() of undefined
   const sortedColors = [...colors].sort(sortFunction(sort))
   return (
     <div className="color-list">
