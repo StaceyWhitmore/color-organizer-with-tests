@@ -1,4 +1,3 @@
-//NEW added from 'color-organizer'
 import { Menu, NewColor, Colors } from './containers'
 import '../stylesheets/APP.scss'
 

@@ -9,42 +9,37 @@ import {rateColor, removeColor} from '../../actions'
 import {sortFunction} from '../../lib/array-helpers'
 
 
-//const ColorList = ({colors=[], onRate=f=>f, onRemove=f=>f}) =>
-const ColorList = ({ store }) => {
-  const {colors, sort} = store.getState()// CANNOT READ PROPERTY getState() of undefined
-  const sortedColors = [...colors].sort(sortFunction(sort))
-  return (
+//const ColorList = ({store}) =>
+const ColorList = ({colors=[], onRate=f=>f, onRemove=f=>f}) =>
+  //const {colors, sort} = store.getState()// TYPE_ERROR: CanNOT READ PROPerty getState() of UNdefined
+  //const sortedColors = [...colors].sort(sortFunction(sort))
+  //return (
     <div className="color-list">
-      {
-        (colors.lenth === 0) ?
+      { (colors.lenth === 0) ?
           <p>No colors listed. (Add a color) </p> :
-          sortedColors.map(color =>
+          /*sorted*/Colors.map(color =>
             <Color key={color.id}
               {...color}
-              onRate={(rating) =>
-                //onRate(color.id, rating)}
-                store.dispatch(
+              onRate={(rating) => onRate(color.id, rating)}
+                /* store.dispatch(
                   rateColor(color.id, rating)
                 )
-              }
-              onRemove={() =>
-                store.dispatch(
-                  removeColor(color.id)
-                )
+              }  */
+              onRemove={() => onRemove(color.id)
+                /* store.dispatch(
+                  removeColor(color.id))   */
               } />
-              //onRemove(color.id)} />
             )
       }
     </div>
+  //)
 
-  )
-}
-  //for debugging
+  //PropTyoes for debugging
   ColorList.propTypes = {
-    //colors: PropTypes.array,
-    //onRate: PropTypes.func,
-    //onRemove: PropTypes.func
-    store: PropTypes.object//make sure store is an object
+    colors: PropTypes.array,
+    onRate: PropTypes.func,
+    onRemove: PropTypes.func
+    //store: PropTypes.object//make sure store is an object
 }
 
   export default ColorList
