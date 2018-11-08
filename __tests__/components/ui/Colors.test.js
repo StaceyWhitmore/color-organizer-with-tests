@@ -4,7 +4,7 @@ import { Colors } from '../../../src/components/containers'
 
 const { mount, shallow } = Enzyme
 
-jest.mock('../../../src.components/ui/ColorList')//jest knows to look in '__mocks__'
+jest.mock('../../../src/components/ui/ColorList')//jest knows to look in '__mocks__'
 
 describe("... the <Colors /> Container ", () => {
 

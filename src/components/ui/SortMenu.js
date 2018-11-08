@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 //import Color from './Color'
 //import React from 'react'
 //import { rateColor, removeColor } from '../actions'
-import { sortColors } from '../actions'
+import { sortColors } from '../../actions'
 
 const options = {
     date: "SORTED_BY_DATE",
