@@ -24,10 +24,10 @@ describe("<ColorList /> UI Component", () => {
             ).toMatchSnapshot()
         )
 
-        it("Defaults Properties correctly", () =>
-            expect(shallow(<ColorList/>).dive().find('p').text())
-                .toBe('No Colors Listed. (Add a Color)')
-        )//use .shallow().dive() to reach actual component (since shallow does not render child elem
+        it("Defaults Properties correctly", () => {
+          expect(shallow(<ColorList />).find('p').text())
+              .toBe('No Colors Listed. (Add a Color)')
+        })//use .shallow().dive() to reach actual component (since shallow does not render child elem
 
         it("Clicking default rate button do not cause Error", () => {
             mount(<ColorList colors={_testColors} />)

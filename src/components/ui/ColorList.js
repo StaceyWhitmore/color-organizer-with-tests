@@ -7,8 +7,8 @@ import {sortFunction} from '../../lib/array-helpers'
 
 const ColorList = ({colors=[], onRate=f=>f, onRemove=f=>f}) =>
     <div className="color-list">
-      { (colors.lenth === 0) ?
-          <p>No Colors listed. (Add a Color)</p> :
+      { (colors.length === 0) ?
+          <p>No Colors Listed. (Add a Color)</p> :
               colors.map(color =>
             <Color key={color.id}
               {...color}
