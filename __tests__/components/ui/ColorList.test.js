@@ -21,7 +21,7 @@ describe("<ColorList /> UI Component", () => {
         it("Renders Correctly", () =>
             compose(expect,toJSON,shallow)(
                 <ColorList colors={_testColors} />
-            ).toMatchSnapshot()
+            ).toMatchSnapshot() //saved to __snapshots__ 
         )
 
         it("Defaults Properties correctly", () => {
