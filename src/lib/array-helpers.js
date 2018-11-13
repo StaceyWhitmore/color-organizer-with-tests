@@ -8,7 +8,7 @@ const sortBy = (type, field) => {
       return (a,b) => (a[field] < b[field]) ? -1 : //if a<b then return falsey(-1)
        1 //...otherwise, truthy(1)
     default :
-      console.log(`a[field] is ${a[field]}. b[field] is ${b[field]}`)
+      //console.log(`a[field] is ${a[field]}. b[field] is ${b[field]}`)
       return (a,b) => b[field] - a[field] //...other by field rating ( of type: number)
   }//close switch
 }//close <sortBy() />
